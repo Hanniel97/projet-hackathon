@@ -3,6 +3,7 @@
 # Nom: EKPELIKPEZE
 # Prénom: Hanniel Ephraïm K.
 # Filière: Génie Logiciel
+# Matricule: 17294418
 
 ## 🎯 Description
 
@@ -89,7 +90,7 @@ cp .env.example .env
 
 ```env
 PORT=5000
-DB_USER_PASS=hanniel:hanniel
+DB_USER_PASS=<Votre mot de passe>
 JWT_EXPIRE = 4d
 REFRESH_JWT_EXPIRES=30d
 JWT_SECRET=1234560987654321074125830de789654123ze7489654123s03218796452fg7458941547gd84z7748946319vhezh566d75z67858sdq8sve65qd48s62s4d5e8qs48cs56dv458e4fd8
