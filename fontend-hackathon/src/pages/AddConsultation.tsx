@@ -134,7 +134,7 @@ export const AddConsultation: React.FC = () => {
                         <input type="number" placeholder="Tension Systolique" name="clinicalData.bloodPressure.systolic" value={form.clinicalData.bloodPressure.systolic} onChange={handleChange} className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                         <input type="number" placeholder="Tension Diastolique" name="clinicalData.bloodPressure.diastolic" value={form.clinicalData.bloodPressure.diastolic} onChange={handleChange} className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                         <input type="number" placeholder="Fréquence cardiaque (bpm)" name="clinicalData.heartRate" value={form.clinicalData.heartRate} onChange={handleChange} className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-                        <input type="number" placeholder="Température (°C)" name="clinicalData.temperature" value={form.clinicalData.temperature} onChange={handleChange} className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                        <input min={10} max={38} type="number" placeholder="Température (°C)" name="clinicalData.temperature" value={form.clinicalData.temperature} onChange={handleChange} className="w-full p-2 mt-1 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                     </div>
                 </div>
 

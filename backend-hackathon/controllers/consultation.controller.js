@@ -128,15 +128,22 @@ export const getConsultationById = async (req, res) => {
 };
 
 export const addConsultation = async (req, res) => {
-    // console.log(req.body)
     try {
         // Validation des données
-        const { error, value } = consultationSchema.validate(req.body);
+        const { error, value } = consultationSchema.validate(req.body, { abortEarly: false });
+
         if (error) {
+            // Extraire les erreurs champ par champ
+            const fieldErrors = {};
+            error.details.forEach(err => {
+                const field = err.path.join('.');
+                fieldErrors[field] = err.message;
+            });
+
             return res.status(400).json({
                 success: false,
-                message: 'Données invalides. Tous les champs sont requis',
-                details: error.details[0].message
+                message: 'Données invalides. Veuillez corriger les erreurs ci-dessous.',
+                errors: fieldErrors
             });
         }
 
@@ -187,10 +194,14 @@ export const addConsultation = async (req, res) => {
             alertsCount: triggeredAlerts.length
         });
     } catch (error) {
-        console.error("Erreur login:", error);
-        res.status(500).json({ success: false, message: "Une erreur est survenue. Rééssayer!" });
+        console.error("Erreur création consultation:", error);
+        res.status(500).json({
+            success: false,
+            message: "Une erreur est survenue. Rééssayer!"
+        });
     }
 };
+
 
 export const updateConsultation = async (req, res) => {
     try {

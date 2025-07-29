@@ -81,7 +81,7 @@ export const Register: React.FC = () => {
                             <Stethoscope className="h-8 w-8 text-blue-600" />
                         </div>
                         <h1 className="text-3xl font-bold text-gray-900 mb-2">Inscription</h1>
-                        <p className="text-gray-600">Créer votre compte AI4CKD</p>
+                        <p className="text-gray-600">Créer votre compte</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -141,7 +141,7 @@ export const Register: React.FC = () => {
                             </div>
                         </div>
 
-                        <div>
+                        {/* <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">
                                 Rôle
                             </label>
@@ -155,7 +155,7 @@ export const Register: React.FC = () => {
                                 <option value="doctor">Docteur</option>
                                 <option value="nurse">Infirmier</option>
                             </select>
-                        </div>
+                        </div> */}
 
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-2">

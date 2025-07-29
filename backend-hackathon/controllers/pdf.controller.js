@@ -84,7 +84,7 @@ export const generatePDF = async (req, res) => {
                 criticalAlerts,
                 unresolvedAlerts
             },
-            doctor: patient.assignedDoctor,
+            doctor: patient.assignedDoctor?.toObject?.(), // ✅ corrigé ici
             generationDate: moment().format('DD/MM/YYYY à HH:mm'),
             hasConditions: patient.medicalHistory.diabetes ||
                 patient.medicalHistory.hypertension ||
@@ -120,7 +120,7 @@ export const generatePDF = async (req, res) => {
             headerTemplate: '<div></div>',
             footerTemplate: `
                         <div style="font-size: 10px; width: 100%; text-align: center; color: #666;">
-                            <span>AI4CKD - Page <span class="pageNumber"></span> sur <span class="totalPages"></span></span>
+                            <span>Kidney Health - Page <span class="pageNumber"></span> sur <span class="totalPages"></span></span>
                         </div>
                     `
         });

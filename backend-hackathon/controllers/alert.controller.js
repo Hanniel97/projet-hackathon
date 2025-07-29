@@ -7,7 +7,7 @@ export const getAlerts = async (req, res) => {
     try {
         const {
             page = 1,
-            limit = 20,
+            limit = 100,
             type,
             category,
             isRead,

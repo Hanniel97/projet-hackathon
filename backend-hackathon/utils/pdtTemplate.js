@@ -270,7 +270,7 @@ export const pdfTemplate = `
 </head>
 <body>
     <div class="header">
-        <div class="logo">AI4CKD - Suivi Maladie Rénale Chronique</div>
+        <div class="logo">Kidney Health - Suivi Maladie Rénale Chronique</div>
         <div class="subtitle">Dossier médical généré le {{generationDate}}</div>
     </div>
 
@@ -520,7 +520,7 @@ export const pdfTemplate = `
     {{/if}}
 
     <div class="footer">
-        <p>Dossier généré par AI4CKD - Système de gestion des patients avec maladie rénale chronique</p>
+        <p>Dossier généré par Kidney Health - Système de gestion des patients avec maladie rénale chronique</p>
         <p>Médecin responsable: Dr. {{doctor.firstName}} {{doctor.lastName}} ({{doctor.speciality}})</p>
         <p>Date de génération: {{generationDate}} - Document confidentiel</p>
     </div>

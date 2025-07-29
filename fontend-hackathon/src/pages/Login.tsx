@@ -44,8 +44,8 @@ export const Login: React.FC = () => {
                         <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                             <Stethoscope className="h-8 w-8 text-blue-600" />
                         </div>
-                        <h1 className="text-3xl font-bold text-gray-900 mb-2">AI4CKD</h1>
-                        <p className="text-gray-600">Système de gestion des patients CKD</p>
+                        <h1 className="text-3xl font-bold text-gray-900 mb-2">Kidney Health</h1>
+                        <p className="text-gray-600">Système de gestion des patients MRC</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-6">

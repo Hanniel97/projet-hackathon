@@ -1,7 +1,8 @@
 import { useStore } from '@/store/useStore';
 // import axios from 'axios';
 
-export const API_BASE_URL = 'http://192.168.100.14:5000/api';
+export const API_BASE_URL = 'http://192.168.100.4:5000/api';
+// export const API_BASE_URL = 'https://backend-hackathon-ky2j.onrender.com/api';
 
 type Method = "GET" | "POST" | "PUT" | "DELETE";
 
