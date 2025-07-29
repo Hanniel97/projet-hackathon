@@ -1,0 +1,15 @@
+import express from 'express';
+import { auth, canAccessPatient } from "../middleware/auth.middleware.js"
+import { getConsultations, getConsultationById, addConsultation, updateConsultation, deleteConsultation, getPatientConsultations, getConsultationStats } from '../controllers/consultation.controller.js';
+
+const router = express.Router();
+
+router.get('/consultations', auth, getConsultations);
+router.get('/consultations/:id', auth, getConsultationById);
+router.post('/consultations', auth, addConsultation);
+router.put('/consultations/:id', auth, updateConsultation);
+router.delete('/consultations/:id', auth, deleteConsultation);
+router.get('/consultations/patient/:patientId', auth, canAccessPatient, getPatientConsultations);
+router.get('/consultations/stats/overview', auth, getConsultationStats);
+
+export default router;
